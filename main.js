@@ -5,10 +5,11 @@ window.addEventListener("DOMContentLoaded", function(event) {
     let observer = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
+                target.style.height = `${300 * 5 + .05 * 300 + 100}px`;
                 papers.forEach((paper, idx) => {
                     paper.style.transform = `translateY(${idx * 100 + (5 * idx)}%) scale(1)`
                 })
-                observer.unobserve(entry.target); // Optionally stop observing after animation played
+                observer.unobserve(entry.target);
             }
         });
     });

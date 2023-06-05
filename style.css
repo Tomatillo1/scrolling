@@ -9,7 +9,7 @@ body {
     position: relative;
 }
 
-body * {
+#container * {
     box-sizing: border-box;
 }
 
